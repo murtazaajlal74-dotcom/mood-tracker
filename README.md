@@ -5,6 +5,12 @@ All faces are drawn purely with `CustomPainter` (no images, no emoji).
 
 ---
 
+## 🌐 Live Demo
+
+👉 **[https://daily-moodflow.netlify.app/]**
+
+---
+
 ## 📁 File Structure
 
 ```
@@ -97,35 +103,23 @@ flutter build web
 
 ---
 
-## ☁️ Deploy to Vercel
+## ☁️ Deploy to Netlify
 
 ```bash
-# Build
+# Build the web app
 flutter build web
-
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy the build/web folder
-cd build/web
-vercel --prod
 ```
 
-## ☁️ Deploy to Firebase Hosting
+Then either:
 
+**Option A — Drag and Drop**
+- Go to netlify.com
+- Drag the `build/web` folder onto the Netlify dashboard
+
+**Option B — Netlify CLI**
 ```bash
-# Install Firebase CLI
-npm install -g firebase-tools
-
-# Login & init
-firebase login
-firebase init hosting
-# Set public directory to: build/web
-# Configure as single-page app: Yes
-
-# Build & deploy
-flutter build web
-firebase deploy
+npm install -g netlify-cli
+netlify deploy --dir=build/web --prod
 ```
 
 ---
